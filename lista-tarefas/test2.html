@@ -16,7 +16,7 @@
             /*centralizar*/
             margin: 0 auto;
             /*cor do fundo*/
-            background-color: black;
+            background-color: rgb(255, 255, 255);
             /*espaçamento entre os elementos*/
             padding: 20px;
         }
@@ -34,18 +34,12 @@
             text-align: center;
 
         }
-        .bangu {
-            color: rgb(177, 0, 0);
+        
+        .login {
+            color: rgb(83, 83, 83);
             font-size: 22px;
             font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-
-        }
-        .juliana {
-            color: rgb(104, 0, 0);
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
+            text-align: 80px;
 
         }
         .dev {
@@ -55,13 +49,9 @@
             text-align: center;
 
         }
-        .zeze {
-            color: rgb(19, 95, 0);
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
+        
 
-        }
+        
         .botao {
             color: rgb(0, 99, 185);
             font-size: 22px;
@@ -70,32 +60,51 @@
 
         }
         .inline-em-blocos {
-
+            text-align: center;
+            display: block;
             border: #fff 6px dotted;
             /*Espaçamento fora dos elementos*/
             margin: 20px;
             color: wheat;
             border-radius: 12px;
+            
+        
+        }
+        .nomeUsuario{
+         border-radius: 70% gray;   
+        
+
+
+
 
         }
-        
+
+
+        .imgDev{
+            border: 2px dotted  pink;
+            margin: 20px;
             
+            
+
+        }
+    
+        
         
     </style>
 </head>
 <body>
     <div class="doris">
-        <button class="botao">blabla</button>
-        <h1 class="titulo">Test 2</h1>
-        <h2 class="sTitulo">Aoba</h2>
-        <h3 class="bangu">Bangu</h3>
-        <h4 class="juliana">Juliana</h4>
-        <h5 class= "dev">Dev jones</h5>
-        <h6 class= "zeze">Zezé</h6>
-        <strong class="inline-em-blocos">Vitão</strong>
-        <span class = "inline-em-blocos">Dev jones</span>
-        <small class = "inline-em-blocos">asddsadsa</small>
-
+        
+        <h1 class="titulo">Acesse sua conta</h1>
+        <h4 class="login">Nome de usuario:</h4>
+        <input type="text" class="nomeUsuario"placeholder="Digite um seu email..."/>
+        <h4 class="login">Senha:</h4>
+        <input type="text" class="nomeUsuario"placeholder="Digite sua senha mais forte."/>
+        <br>
+        <br>
+        <br>
+        <img src="img/img-1.jpg" class="imgDev"/>
+        
     </div>
 </body>
 </html>
