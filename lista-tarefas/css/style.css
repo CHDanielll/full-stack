@@ -1,5 +1,10 @@
 body{
-    background-color: rgb(83, 83, 83);
+    background: url('../img/bg-site.jpg') no-repeat;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+
+    
+
 
 }
 
