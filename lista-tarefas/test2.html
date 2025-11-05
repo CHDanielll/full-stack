@@ -4,76 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test2</title>
-    <!-- Css no mesmo arquivo -->
+
+    <!-- CSS no mesmo arquivo -->
     <style>
       body {
         background-color: rgb(0, 154, 214);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .borda2 {
+        border: 12px solid gray;
+        max-width: 400px;
+        margin: 40px auto;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
 
       .doris {
         border: 3px solid rgb(255, 255, 255);
-        max-width: 500px;
-        /*centralizar*/
-        margin: auto;
-        /*cor do fundo*/
         background-color: rgb(255, 255, 255);
-        /*espaçamento entre os elementos*/
         padding: 20px;
-      }
-      .borda2 {
-        border: 12px solid gray;
-        max-width: 400px;
-        margin: auto;
-        border-radius: 12px;
       }
 
       .titulo {
         color: rgb(255, 191, 0);
         font-size: 22px;
-        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
+        margin-bottom: 25px;
       }
 
       .login {
         color: rgb(83, 83, 83);
         font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 0;
+        margin-bottom: 5px;
       }
 
       .nomeUsuario {
         display: block;
-        border: 2px solid rgb(83, 83, 83);
+        width: 100%;
+        padding: 10px;
         background-color: transparent;
         color: gray;
-        border-radius: 10px;
-        border: none;
+        border: 2px solid rgb(83, 83, 83);
         border-radius: 25px;
+        margin-bottom: 15px;
+        outline: none;
+      }
+
+      .nomeUsuario:focus {
+        border-color: rgb(0, 154, 214);
       }
 
       .imgDev {
-        margin: 0%;
+        display: block;
+        width: 150px; /* tamanho da imagem */
+        height: auto; /* mantém proporção */
+        margin: 20px auto 0; /* centraliza e adiciona espaçamento */
       }
     </style>
   </head>
+
   <body>
     <div class="borda2">
       <div class="doris">
         <h1 class="titulo">Acesse sua conta</h1>
-        <h4 class="login">Nome de usuario:</h4>
+
+        <h4 class="login">Nome de usuário:</h4>
         <input
           type="text"
           class="nomeUsuario"
-          placeholder="Digite um seu email..."
+          placeholder="Digite seu email..."
         />
+
         <h4 class="login">Senha:</h4>
         <input
-          type="text"
+          type="password"
           class="nomeUsuario"
-          placeholder="Digite sua senha mais forte."
+          placeholder="Digite sua senha mais forte..."
         />
-        <br />
-        <img src="img/img-1.jpg" class="imgDev" />
+
+        <img src="img/login.png" class="imgDev" alt="Imagem de login" />
       </div>
     </div>
   </body>
