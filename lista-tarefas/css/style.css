@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(83, 83, 83);
+
+}
+
+
+#container {
+    background-color: aliceblue;
+    border: 3px solid rgb(0, 0, 0);
+    /*largura da tela*/
+    max-width: 400px;
+    /*centralizar*/
+    margin: 0 auto;
+    /*espaçamento dentro dos elementos*/
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+
+
+}
+
+
+#container {
+    color: rgb(65, 65, 65);
+    /*espaçamento dentro do elemento*/
+    padding: 15px;
+    /*tamanho do texto*/
+    font-size: 30px;
+}
+#tarefa {
+    color: rgb(119, 1, 1);
+    border:  2px solid rgb(65,65, 65);
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+
+}
+#tarefa::placeholder{
+    color: gray;
+}
