@@ -1,110 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test2</title>
     <!-- Css no mesmo arquivo -->
     <style>
-        body {
-            background-color: rgb(0, 89, 141);
-        }
+      body {
+        background-color: rgb(0, 154, 214);
+      }
 
-        .doris {
-            border: 3px solid rgb(255, 255, 255);
-            max-width: 500px;
-            /*centralizar*/
-            margin: 0 auto;
-            /*cor do fundo*/
-            background-color: rgb(255, 255, 255);
-            /*espaçamento entre os elementos*/
-            padding: 20px;
-        }
+      .doris {
+        border: 3px solid rgb(255, 255, 255);
+        max-width: 500px;
+        /*centralizar*/
+        margin: auto;
+        /*cor do fundo*/
+        background-color: rgb(255, 255, 255);
+        /*espaçamento entre os elementos*/
+        padding: 20px;
+      }
+      .borda2 {
+        border: 12px solid gray;
+        max-width: 400px;
+        margin: auto;
+        border-radius: 12px;
+      }
 
-        .titulo{
-            color: aliceblue;
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-        .sTitulo {
-            color: aliceblue;
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
+      .titulo {
+        color: rgb(255, 191, 0);
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
 
-        }
-        
-        .login {
-            color: rgb(83, 83, 83);
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: 80px;
+      .login {
+        color: rgb(83, 83, 83);
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 0;
+      }
 
-        }
-        .dev {
-            color: rgb(83, 83, 83);
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
+      .nomeUsuario {
+        display: block;
+        border: 2px solid rgb(83, 83, 83);
+        background-color: transparent;
+        color: gray;
+        border-radius: 10px;
+        border: none;
+        border-radius: 25px;
+      }
 
-        }
-        
-
-        
-        .botao {
-            color: rgb(0, 99, 185);
-            font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-
-        }
-        .inline-em-blocos {
-            text-align: center;
-            display: block;
-            border: #fff 6px dotted;
-            /*Espaçamento fora dos elementos*/
-            margin: 20px;
-            color: wheat;
-            border-radius: 12px;
-            
-        
-        }
-        .nomeUsuario{
-         border-radius: 70% gray;   
-        
-
-
-
-
-        }
-
-
-        .imgDev{
-            border: 2px dotted  pink;
-            margin: 20px;
-            
-            
-
-        }
-    
-        
-        
+      .imgDev {
+        margin: 0%;
+      }
     </style>
-</head>
-<body>
-    <div class="doris">
-        
+  </head>
+  <body>
+    <div class="borda2">
+      <div class="doris">
         <h1 class="titulo">Acesse sua conta</h1>
         <h4 class="login">Nome de usuario:</h4>
-        <input type="text" class="nomeUsuario"placeholder="Digite um seu email..."/>
+        <input
+          type="text"
+          class="nomeUsuario"
+          placeholder="Digite um seu email..."
+        />
         <h4 class="login">Senha:</h4>
-        <input type="text" class="nomeUsuario"placeholder="Digite sua senha mais forte."/>
-        <br>
-        <br>
-        <br>
-        <img src="img/img-1.jpg" class="imgDev"/>
-        
+        <input
+          type="text"
+          class="nomeUsuario"
+          placeholder="Digite sua senha mais forte."
+        />
+        <br />
+        <img src="img/img-1.jpg" class="imgDev" />
+      </div>
     </div>
-</body>
+  </body>
 </html>
