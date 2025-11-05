@@ -21,14 +21,14 @@ body{
 
 
 #container {
-    color: rgb(65, 65, 65);
+    /*color: rgb(65, 65, 65);*/
     /*espaçamento dentro do elemento*/
     padding: 15px;
     /*tamanho do texto*/
-    font-size: 30px;
+    font-size: 15px;
 }
 #tarefa {
-    color: rgb(119, 1, 1);
+    color: rgb(0, 0, 0);
     border:  2px solid rgb(65,65, 65);
     padding: 5px;
     border-radius: 5px;
@@ -37,4 +37,13 @@ body{
 }
 #tarefa::placeholder{
     color: gray;
+}
+#btn-add{
+    background-color: gray;
+    padding: 8px;
+    border: 0;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+
 }
