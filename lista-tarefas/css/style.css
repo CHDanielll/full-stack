@@ -1,54 +1,50 @@
-body{
-    background: url('../img/bg-site.jpg') no-repeat;
-    background-color: rgb(63, 63, 63);
-    background-size: cover;
-
-    
-
-
+body {
+  background: url("../img/bg-site.jpg") no-repeat;
+  background-color: rgb(63, 63, 63);
+  background-size: cover;
 }
 
-
 #container {
-    background-color: aliceblue;
-    border: 3px solid rgb(0, 0, 0);
-    /*largura da tela*/
-    max-width: 400px;
-    /*centralizar*/
-    margin: 0 auto;
-    /*espaçamento dentro dos elementos*/
-    padding: 20px;
-    text-align: center;
-    border-radius: 25px;
-
-
+  background-color: aliceblue;
+  border: 3px solid rgb(0, 0, 0);
+  /*largura da tela*/
+  max-width: 400px;
+  /*centralizar*/
+  margin: 0 auto;
+  /*espaçamento dentro dos elementos*/
+  padding: 20px;
+  text-align: center;
+  border-radius: 25px;
 }
 
-
 #container {
-    /*color: rgb(65, 65, 65);*/
-    /*espaçamento dentro do elemento*/
-    padding: 15px;
-    /*tamanho do texto*/
-    font-size: 15px;
+  /*color: rgb(65, 65, 65);*/
+  /*espaçamento dentro do elemento*/
+  padding: 15px;
+  /*tamanho do texto*/
+  font-size: 15px;
 }
 #tarefa {
-    color: rgb(0, 0, 0);
-    border:  2px solid rgb(65,65, 65);
-    padding: 5px;
-    border-radius: 5px;
-    outline: none;
-
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(65, 65, 65);
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
 }
-#tarefa::placeholder{
-    color: gray;
+#tarefa::placeholder {
+  color: gray;
 }
-#btn-add{
-    background-color: transparent;
-    padding: 8px;
-    border: 0;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
+#btn-add {
+  background-color: transparent;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
 
+.tarefass {
+  padding: 8px;
+
+  font-size: 20px;
 }
