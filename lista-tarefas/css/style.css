@@ -1,11 +1,12 @@
 body {
-  background: url("../img/bg-site.jpg") no-repeat;
+    background: url("../img/bg-site.jpg") no-repeat center center;
   background-color: rgb(63, 63, 63);
   background-size: cover;
+  background-attachment: fixed; /* opcional, fixa o fundo */
 }
 
 #container {
-  background-color: aliceblue;
+  background-color: transparent;
   border: 3px solid rgb(0, 0, 0);
   /*largura da tela*/
   max-width: 400px;
@@ -17,13 +18,6 @@ body {
   border-radius: 25px;
 }
 
-#container {
-  /*color: rgb(65, 65, 65);*/
-  /*espaçamento dentro do elemento*/
-  padding: 15px;
-  /*tamanho do texto*/
-  font-size: 15px;
-}
 #tarefa {
   color: rgb(0, 0, 0);
   border: 2px solid rgb(65, 65, 65);
@@ -41,10 +35,15 @@ body {
   border-radius: 8px;
   display: block;
   margin: 0 auto;
+  font-size: 20px;
+  
 }
 
-.tarefass {
+.linksW3 {
   padding: 8px;
-
+  display: block;
+  margin: 0 auto;
+  width: 400px;
   font-size: 20px;
+
 }

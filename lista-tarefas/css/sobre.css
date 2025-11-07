@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: url("../img/img2.jpg") no-repeat center center;
+  background-color: rgb(63, 63, 63);
+  background-size: cover;
+  background-attachment: fixed; /* opcional, fixa o fundo */
+}
+
+.container {
+background: #6c6c66;
+width: 1000px;
+border-radius: 25px;
+margin: 0 auto;
+}
+
+
+.container marquee {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+.esp a{
+    padding: 0px;
+    display: block;
+    text-decoration: none;
+    font-size: 22px;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.esp a:hover {
+    text-decoration: underline;
+    color: rgb(165, 42, 42);
+    
+}
+
+.container p{
+    color: rgb(0, 0, 0);
+
+}
+
+.esp{
+ text-align: center;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
