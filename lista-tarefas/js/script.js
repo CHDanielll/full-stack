@@ -1,15 +1,18 @@
-// Função em JavaScript
 function adicionar() {
-    // Variaveis
-    let tarefa = docgitument.getElementById("tarefa");
-    let lista = document.getElementById("lista");
-    let checkbox = document.getElementById("checkbox")
-    
-    let item = document.createElement("checkbox")
-    let item = document.createElement("li");
-    item.textContent = tarefa.value;
-    item.textContent = checkbox.value;
+  let tarefa = document.getElementById("tarefa");
+  let lista = document.getElementById("lista");
 
-    lista.appendChild(item);
+  let item = document.createElement("li");
+
+  let checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+
+  let texto = document.createTextNode(tarefa.value);
+
+  item.appendChild(checkbox);
+  item.appendChild(texto);
+
+  lista.appendChild(item);
+
+  tarefa.value = "";
 }
-    
