@@ -23,5 +23,5 @@ if (idade < 16){
     document.write("voto opcional.");
 }
 else{
-    alert("voto obrigatorio.");
+    document.write("voto obrigatorio.");
 }
