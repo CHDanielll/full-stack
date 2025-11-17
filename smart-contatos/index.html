@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Contatos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head> 
 <body>
     <main class="container">
@@ -25,14 +27,15 @@
                 <input type="text" id="telefone" placeholder="Digite seu telefone">
 
                 </section>
-                <button type="submit">Cadastro</button> 
+                <button type="submit" onclick="cadastrado(event)">Cadastrar</button> 
         </form>
-        <h2>Lista de Contatos</h2>
-        <ul class="Lista">
+        <h2 class="h2">lista de contatos</h2>
+        <ul class="lista">
             <!--Aqui a lista vai aparecer (futuramente com JS)-->
-            <li>A a lista aparece aqui...</li>
+            <li>A lista aparece aqui...</li>
         </ul>
     </main>
-    
+    <script src="./js/script.js"></script>
 </body>
 </html>
+
