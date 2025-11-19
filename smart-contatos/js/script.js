@@ -4,10 +4,14 @@ const lista = document.querySelector(".lista")
 const inputNome = document.getElementById("nome");
 const inputEmail = document.getElementById("email");
 const inputTelefone = document.getElementById("telefone");
+const listaMsg = document.querySelector(".lista-msg");
 
 form.addEventListener("submit", function(event){
     event.preventDefault();
 
+if (listaMsg){
+    listaMsg.remove(listaMsg);
+}
 
 //validação do formulario
 /*
@@ -43,9 +47,21 @@ if (inputNome.value == "") {
     console.log("Email:",inputEmail.value);
     console.log("telefone:",inputTelefone.value);*/
 
+    // criando botao Excluir
+    const btnExcluir = document.createElement("button");
+    btnExcluir.textContent ="Excluir";
+    btnExcluir.className = "btn-delete";
+
+
     
     // criar li
     const li = document.createElement("li");
+
+    // Criando uma function para excluir os dados de cadastro
+    btnExcluir.addEventListener("click", function(){
+        alert("teste")
+    })
+
 
     li.innerHTML = `
     <span class="contato-nome">${inputNome.value}</span>
@@ -58,9 +74,13 @@ if (inputNome.value == "") {
     //append
     lista.append(li)
 
+    //botao
+    li.append(btnExcluir)
+
     //limpar oque ja foi escrito
     form.reset();
 })
+
 
 
 
