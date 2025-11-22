@@ -111,10 +111,12 @@ button {
 }
 
 .contato-email,
-.contato-telefone {
+.contato-telefone,
+.contato-endereco {
     font-size: 14px;
     color: #555;
 }
+
 
 /* ITEM DE EXEMPLO */
 .item-exemplo {
