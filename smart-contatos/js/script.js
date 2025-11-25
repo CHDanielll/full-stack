@@ -11,14 +11,11 @@ form.addEventListener("submit", function(event){
     event.preventDefault();
 
 if (listaMsg){
-    listaMsg.remove(listaMsg);
+    listaMsg.remove();
 }
 
 //validação do formulario
-/*
-se o input for vazio, adicionar uma mensagem
-*/
-if (inputNome.value == ""||inputNome.value == "" || inputNome.value == "" || inputEndereco.value == "") {
+if (inputNome.value === "" || inputEmail.value === "" || inputTelefone.value === "" || inputEndereco.value === "") {
    alert("Digite Seus dados");
    return false;    
 }
@@ -29,8 +26,6 @@ if (inputNome.value == ""||inputNome.value == "" || inputNome.value == "" || inp
     btnExcluir.textContent ="Excluir";
     btnExcluir.className = "btn-delete";
 
-
-    
     // criar li
     const li = document.createElement("li");
 
@@ -44,26 +39,26 @@ if (inputNome.value == ""||inputNome.value == "" || inputNome.value == "" || inp
         
     })
 
+    // Cria os spans com as classes corretas
+    const nomeSpan = document.createElement('span');
+    nomeSpan.className = 'contato-nome';
+    nomeSpan.textContent = inputNome.value;
 
-    li.innerHTML = `
-    <span class="contato-nome">${inputNome.value}</span>
-    <span class="contato-nome">${inputEmail.value}</span>
-    <span class="contato-nome">${inputTelefone.value}</span>
-    <span class="contato-nome">${inputEndereco.value}</span>
-    `;
-    
-    console.log(li)
+    const emailSpan = document.createElement('span');
+    emailSpan.className = 'contato-email';
+    emailSpan.textContent = inputEmail.value;
 
-    //append
-    lista.append(li)
+    const telefoneSpan = document.createElement('span');
+    telefoneSpan.className = 'contato-telefone';
+    telefoneSpan.textContent = inputTelefone.value;
 
-    //botao
-    li.append(btnExcluir)
+    const enderecoSpan = document.createElement('span');
+    enderecoSpan.className = 'contato-endereco'; // Você pode criar um estilo para este também
+    enderecoSpan.textContent = inputEndereco.value;
 
+    // Adiciona os elementos ao 'li' e o 'li' à lista
+    li.append(nomeSpan, emailSpan, telefoneSpan, enderecoSpan, btnExcluir);
+    lista.append(li);
     //limpar oque ja foi escrito
     form.reset();
 })
-
-
-
-
