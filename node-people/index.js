@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 3000; // executar na porta 3000
 
+// indicar para express ler o body com o json
+app.use(express.json());
+
 // mock
 const nomes = [
   { id: 1, nome: "Fernanda", idade: "18" },
@@ -15,6 +18,12 @@ const nomes = [
 // Retomar o objeto por id
 function buscarNomePorId(id){
     return nomes.filter((nome) => nome.id == id)
+}
+
+// Pegar a posção ou index do elemento do Array por id
+function buscarIdNomes(id){
+  return nomes.findIndex((nome) => nome.id== id)
+
 }
 
 
@@ -40,6 +49,23 @@ app.get("/listaNomes/:id", (req,res)=>{
    
    res.json(buscarNomePorId(index))
 })
+
+//Criando post para cadastrar
+app.post("/listaNomes", (req,res) => {
+  nomes.push(req.body)
+  res.status(201).send('Nomes cadastrado com sucesso!');
+
+})
+
+
+//Rota de delete
+app.delete("/listaNomes/:id", (req, res) => {
+  let index = buscarIdNomes(req.params.id)
+  nomes.splice(index, 1);
+  res.send(`nomes com id ${req.params.id} excluida com sucesso!`);
+  
+});
+
 
 app.listen(PORT, () => {
   console.log("Servidor rodando no endereço http://localhost:${PORT}");
