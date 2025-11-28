@@ -51,10 +51,17 @@ app.post("/listaTimes", (req, res)=>{
 
 // Rota para delete
 app.delete("/listaTimes/:id", (req, res)=>{
-  let index = buscarIdTimes(req.params.id)
+  let id = req.params.id;
+  let index = buscarIdTimes(id);
+
+  // se nao encontrar, retorna o erro
+  if(index === -1){
+    return res.status(404).send(`Nenhum nome com id ${id} foi encontrado`)
+  }
   times.splice(index, 1);
-  res.send(`times com id ${req.params.id} excluida com sucesso!`);
+  res.send(`Nomes com id ${req.params.id} excluida com sucesso!`);
 });
+
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando no endereço http://localhost:${PORT}`);
