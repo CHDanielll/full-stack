@@ -2,21 +2,8 @@ const express = require("express");
 const app = express();
 const PORT = 3000; // executar na porta 3000
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando no endereço http://localhost:${PORT}`);
-});
-
-
-function buscarTimesPorId(id){
-    return times.filter((times) => times.id == id)
-}
-
-
-function buscarIdtimes(id){
-  return times.findIndex((times) => times.id== id)
-
-}
-
+// indicar para express ler o body com o json
+app.use(express.json());
 
 
 const times = [
@@ -29,26 +16,46 @@ const times = [
   { id: 7, times: "Cruzeiro", estado: "MG", titulos: 4 },
 ];
 
-app.get("/teste", (req, res)=>{
-    res.send("API nodePeople está funcionando!");
+function buscarTimesPorId(id){
+  return times.filter((times) => times.id == id)
+}
+
+
+function buscarIdTimes(id){
+  return times.findIndex((times) => times.id == id)
+  
+}
+
+// Caso n encontre alguma rota
+app.get("/", (req, res) => {
+  res.send("digite um endereço valido");
 });
 
+//Busca os times
 app.get('/listaTimes',(req,res)=>{
-    res.send(times);
+  res.send(times);
 });
 
-
-app.get("/listaTimes/:id", (req, res)=>{
-    let index = req.params.id;
+//buscando por id
+app.get("/listaTimes/:id", (req,res)=>{
+   let index = req.params.id;
    
    res.json(buscarTimesPorId(index))
 })
+// Para colcoar um time para jogar o bglh la
+app.post("/listaTimes", (req, res)=>{
+  times.push(req.body);
+  res.status(201).send("Time adicionado com sucesso!");
+})
 
 
-
-
-app.delete("/del", (req, res)=>{
-    let index = buscarIdtimes(req.params.id)
+// Rota para delete
+app.delete("/listaTimes/:id", (req, res)=>{
+  let index = buscarIdTimes(req.params.id)
   times.splice(index, 1);
   res.send(`times com id ${req.params.id} excluida com sucesso!`);
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando no endereço http://localhost:${PORT}`);
 });
