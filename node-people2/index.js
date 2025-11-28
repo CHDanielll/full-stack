@@ -48,6 +48,14 @@ app.post("/listaTimes", (req, res)=>{
   res.status(201).send("Time adicionado com sucesso!");
 })
 
+//Rota alterar
+app.put("/listaTimes/:id", (req, res) => {
+  let index = buscarIdTimes(req.params.id);
+  times[index].times = req.body.times;
+  times[index].titulos = req.body.titulos;
+  
+  res.json(times);
+})
 
 // Rota para delete
 app.delete("/listaTimes/:id", (req, res)=>{
