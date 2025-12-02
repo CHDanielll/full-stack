@@ -42,7 +42,7 @@ function buscarIdCadastros(id) {
 }
 
 app.get("/", (req, res) => {
-    res.send("404");
+    res.send("Olá Node js");
 });
 
 app.get("/listaCadastros", (req, res) => {
