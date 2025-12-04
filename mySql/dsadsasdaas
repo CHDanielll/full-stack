@@ -1,0 +1,78 @@
+-- Cria o banco de dados onde vamos trabalhar
+create database sistema_produtos;
+
+use sistema_produtos;
+
+-- cria a tabela 'produtos' com algumas colunas básicas
+create table produtos (
+	id int auto_increment primary key, -- ID ÚNICO
+    nome varchar(100) not null, -- Nome produto
+    email varchar(120) not null, -- Email (exemplo genérico)
+    telefone varchar(20), -- Telefone
+    cpf varchar(14), -- Cpf
+    endereco varchar(150) -- Endereco simples
+);
+
+-- Insere dois registro
+insert into produtos (nome, email, telefone, cpf, endereco) values
+	('Eduardo Ramos', 'edu.ramos@orutos.com', '11983784473', '243-675-767.56', 'Rua Orutos F'),
+    ('Juliana Clara', 'juliana@oruto.com', '116975645756', '654-665-349.86', 'Rua Orutos');
+
+-- Seleciona o registro onde o id = 1
+select * from produtos where id = 2;
+
+select * from produtos;
+
+-- Deleta o registro onde o id = 1
+delete from produtos where id = 31;
+
+select * from produtos;
+
+-- Insere mais um registro
+insert into produtos (nome, email, telefone, cpf, endereco) values
+	('Jorge almeida','JORGIN@gmail.com', '119548536767', '465-584-785.27', 'Rua almeda diamante 56');
+    
+delete from produtos where id = 2;
+
+select * from produtos;
+
+-- Atualiza o nome onde o id for 34
+update produtos
+set nome = 'Jorge alameida soares'
+where id = 34;
+
+select * from produtos;
+ -- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+-- cria uma tabela 'Usuarios'
+create table usuarios (
+	id int auto_increment primary key,
+    nome varchar(120) not null,
+    email varchar(140) not null,
+    idade varchar(3) not null,
+	endereco varchar(200)
+);
+
+insert into usuarios (nome, email, idade, endereco) values
+('Ana Pereira', 'ana.pereira@example.com', '28', 'Rua das Flores, 120 - São Paulo/SP'),
+('Bruno Silva', 'bruno.silva@example.com', '32', 'Av. Central, 450 - Rio de Janeiro/RJ'),
+('Carla Mendes', 'carla.mendes@example.com', '25', 'Rua Bela Vista, 89 - Belo Horizonte/MG'),
+('Diego Rocha', 'diego.rocha@example.com', '30', 'Rua das Acácias, 210 - Curitiba/PR'),
+('Eduarda Lima', 'eduarda.lima@example.com', '27', 'Travessa Horizonte, 55 - Salvador/BA'),
+('Fernando Alves', 'fernando.alves@example.com', '35', 'Av. Independência, 980 - Porto Alegre/RS'),
+('Gabriela Torres', 'gabriela.torres@example.com', '29', 'Rua do Sol, 300 - Recife/PE'),
+('Henrique Duarte', 'henrique.duarte@example.com', '33', 'Rua Palmeira, 145 - Fortaleza/CE'),
+('Isabela Martins', 'isabela.martins@example.com', '26', 'Rua Ipê Amarelo, 72 - Goiânia/GO'),
+('João Cardoso', 'joao.cardoso@example.com', '31', 'Av. Primavera, 600 - Manaus/AM');
+
+
+-- subistiutir
+update usuarios
+set nome = 'ana pereira'
+where id = 1;
+
+-- Deletar usuario
+delete from usuarios where id = 1;
+
+
+
+select * from usuarios;
