@@ -14,12 +14,20 @@ id int auto_increment primary key, -- ID unico
     endereco varchar(150) -- endereco simples 
 );
 -- inser dois registro
-insert into produtos(nome, email, telefone, cpf, endereco) value
+insert into produtos(nome, email, telefone, cpf, endereco) values
 ('Eduardo Ramos', 'edu.ramos@orutos.com', '11931831520', '323.234.428-93','Rua orutos F'),
 ('juliana Clara', 'juliana@oruts.com', '11931831521', '122.313.131-32', 'Rua orutos');
 
--- seleciona o registro onde o id = 1
+-- seleciona o registro 
 select * from produtos where id = 1;
 select * from produtos where id = 2;
+
+-- Deleta o registro 
+delete from produtos where id = 4;
+
+-- Atualizar alguma informação 
+update produtos
+set nome = 'zeze campos dev'
+where id = 5;
 
 select * from produtos;
