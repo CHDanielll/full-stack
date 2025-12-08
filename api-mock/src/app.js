@@ -16,4 +16,23 @@ app.get('/selecoes', (req, res) =>{
 
 });
 
+// Buscando por ID
+app.get('/selecoes/:id', (req,res) =>{
+    const id = req.params.id;
+    const sql = "SELECT * FROM selecoes where id=?;";
+    conexao.query(sql, id, (erro,result) => {
+        res.json(result[0]);
+    });
+});
+
+// Deletando registro
+app.delete('/selecoes/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "delete from selecoes where id=?";
+    conexao.query(sql, id, (erro,result) => {
+        res.send(mensagem: "Time deleatado");
+    })
+})
+
+
 export default app;
