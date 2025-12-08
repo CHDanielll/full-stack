@@ -30,9 +30,9 @@ app.delete('/selecoes/:id', (req, res) => {
     const id = req.params.id;
     const sql = "delete from selecoes where id=?";
     conexao.query(sql, id, (erro,result) => {
-        res.send(mensagem: "Time deleatado");
-    })
-})
+        res.send("Time deleatado");
+    });
+});
 
 
 export default app;
