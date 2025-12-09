@@ -33,6 +33,12 @@ app.delete('/selecoes/:id', (req, res) => {
         res.send("Time deleatado");
     });
 });
-
+app.post('/selecoes/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "post from selecoes where id=?";
+    conexao.query(sql, id, (erro,result) => {
+        res.send("Time adicionado");
+    });
+});
 
 export default app;
