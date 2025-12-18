@@ -3,34 +3,29 @@ import conexao from "../infra/conexao.js";
 
 const app = express();
 
+// Indicar para express ler o body com json
+app.use(express.json());
+
 app.get("/", (req, res) => {
-    res.send("Olá Copa do Mundo");
+    res.send("Olá Copa do Mundo!");
 });
 
 // Buscar todas as seleções 
-app.get('/selecoes', (req, res) =>{
+app.get('/selecoes', (req, res) => {
     const sql = "select * from selecoes";
-    conexao.query(sql, (erro, result)=> {
+
+    conexao.query(sql, (erro, result) => {
         res.json(result);
     });
-
 });
 
 // Buscando por ID
-app.get('/selecoes/:id', (req,res) =>{
+app.get('/selecoes/:id', (req, res) => {
     const id = req.params.id;
-    const sql = "SELECT * FROM selecoes where id=?;";
-    conexao.query(sql, id, (erro,result) => {
-        res.json(result[0]);
-    });
-});
+    const sql = "select * from selecoes where id=?;";
 
-// Deletando registro
-app.delete('/selecoes/:id', (req, res) => {
-    const id = req.params.id;
-    const sql = "delete from selecoes where id=?";
-    conexao.query(sql, id, (erro,result) => {
-        res.send("Time deleatado");
+    conexao.query(sql, id, (erro, result) => {
+        res.json(result[0]);
     });
 });
 
@@ -44,6 +39,28 @@ app.post('/selecoes', (req, res) => {
     })
 });
 
+
+
+// Deletando registro
+app.delete('/selecoes/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "delete from selecoes where id=?";
+
+    conexao.query(sql, id, () => {
+        res.json({ menssagem: "Deletando com sucesso"});
+    });
+})
+
+// Atualizando registro
+app.put('/selecoes/:id', (req, res) => {
+    const id = req.params.id;
+    const selecao = req.body;
+    const sql = "update selecoes set ? where id=?";
+
+    conexao.query(sql, [selecao, id], () => {
+        res.json({mensagem: "Atualizando com sucesso!" });
+    });
+});
 
 
 export default app;
