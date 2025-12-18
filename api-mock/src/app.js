@@ -34,5 +34,16 @@ app.delete('/selecoes/:id', (req, res) => {
     });
 });
 
+// Criando POST para cadastrar 
+app.post('/selecoes', (req, res) => {
+    const selecao = req.body;
+    const sql = "INSERT INTO selecoes SET?;";
+
+    conexao.query(sql, selecao, () => {
+        res.json({ mensagem: "Cadastrado com sucesso!"});
+    })
+});
+
+
 
 export default app;
